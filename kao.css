@@ -1,0 +1,344 @@
+/*CSS for CIS133DA SPR 2024 webproject
+Mily Kao
+Last updated March 3, 2024*/
+
+/*global styles*/
+/*the background of the whole page*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: #f5f3ed;
+}
+
+#wrapper {
+    background-color: #79aabb;
+    border: solid 2px #79aabb;
+
+
+}
+
+/*header with logo on the left*/
+header {
+    color: #244092;
+    background-image: url(logo.png), linear-gradient(to bottom right, #f5f3ed, #bfecfb);
+    background-position: 0.5cm, right;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    padding: 2em;
+
+}
+
+main {
+    background-color: #f5f3ed;
+    color: #2a1d1d;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1.5em;
+    font-size: larger;
+}
+
+h1 {
+    font-size: 50px;
+    text-shadow: 2px 2px #6183a1;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+}
+
+h2 {
+    color: #244092;
+    text-shadow: 1px 1px #6e83a1;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 0.5em;
+}
+
+h3 {
+    color: #244092;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+
+/*styling sections*/
+section {
+    margin: 0.5em;
+    padding: 0.5em;
+    flex: 1;
+}
+
+
+/*styling footer background and text*/
+footer {
+    padding: 2em;
+    background-image: linear-gradient(to bottom right, #f5f3ed, #bfecfb);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    font-style: italic;
+}
+
+/* Styles to configure navigation links as horizontal areas */
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    border-top: 3px solid #f5f3ed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav li {
+    border-bottom: 3px solid #f5f3ed;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    padding-top: 1.5em;
+    padding-bottom: .5em;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:link {
+    color: #244092;
+}
+
+nav a:hover {
+    color: #C6412b;
+}
+
+/* make the current page's link look different */
+nav #page {
+    font-weight: bold;
+    color: #FEFEFE;
+}
+
+
+/** class and id********************************/
+
+#homehero {
+    height: 430px;
+    background-image: url(web_hero.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#howtohero {
+    height: 430px;
+    background-image: url(howto_hero.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#abouthero {
+    height: 430px;
+    background-image: url(abouthero.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#contacthero {
+    height: 430px;
+    background-image: url(contacthero.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+.remark {
+    font-size: larger;
+    color: #c6412b;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/**styling policy fineprint**/
+.fineprint {
+    font-size: smaller;
+}
+
+/**styling responsive iamges**/
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/**styling fitures**/
+figure{
+    margin-right: 1em;
+}
+
+/**styling float image**/
+.float {
+    float: right;
+    width: 180px;
+    height: 180px;
+    margin-left: 15px;
+}
+
+/* Force older versions of Internet Explorer to display these HTML5 elements with block display. */
+header,
+nav,
+main,
+footer,
+figure {
+    display: block;
+}
+
+
+/*configuring form with grid*/
+form {
+    font-family: Arial, sans-serif;
+    color: #2a1d1d;
+    padding: 2em;
+}
+
+label {
+    float: left;
+    clear: left;
+    display: block;
+    width: 120px;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 7px;
+
+}
+
+input,
+textarea {
+    color: #2a1d1d;
+    font-weight: bold;
+    margin-top: 5px;
+    display: block;
+
+
+}
+
+
+.commentheight {
+    height: 100px;
+}
+
+
+input[type="submit"] {
+    width: 10em;
+    background-color: #bfecfb;
+    font-size: medium;
+}
+
+input[type="reset"] {
+    width: 6em;
+}
+
+/**media queries medium layout**/
+
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        border-bottom: none;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 6em 1fr;
+        grid-template-rows: auto;
+        grid-gap: 0.6em;
+        max-width: 26em;
+
+    }
+
+    input[type="submit"] {
+        grid-column: 2 / 3;
+
+    }
+
+    input[type="reset"] {
+        grid-column: 2 / 3;
+
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    #wrapper {
+        display: grid;
+        grid-template:
+            "header header"
+            "nav    nav"
+            "main   main"
+            "footer footer"
+            / 55%
+    }
+
+    /***creating n-column layout for Conference***/
+    .flow {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+/**media queries large layout**/
+@media (min-width: 1024px) {
+    body {
+        background-color: #f5f3ed;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    #wrapper {
+        width: 80%;
+        margin: auto;
+        max-width: 1200px;
+        display: grid;
+        grid-template:
+            "header header"
+            "nav main"
+            "footer footer"
+            / 150px;
+    }
+}
