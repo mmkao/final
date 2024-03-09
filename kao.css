@@ -264,7 +264,13 @@ input[type="reset"] {
     display: block;
 }
 
-
+/**media query nav bar display for larger layouts**/
+@media (min-width: 481px) {
+    .nav-List {
+        display: inline-flex;
+         justify-content: space-around;
+            }
+}
 
 /**media queries medium layout**/
 
